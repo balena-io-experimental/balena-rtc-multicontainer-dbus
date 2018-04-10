@@ -14,7 +14,7 @@ function call_time() {
       --dest=org.freedesktop.timedate1  \
       /org/freedesktop/timedate1  \
       org.freedesktop.timedate1.SetLocalRTC \
-      boolean:${local_rtc} boolean:${fix_system} boolean:false
+      boolean:${local_rtc} boolean:${fix_system} boolean:false 2>/dev/null || true
 }
 # This call will "fail" due to read-only file system, but we need it for the next step
 call_time true false
