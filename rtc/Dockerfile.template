@@ -1,5 +1,7 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-alpine
 
+ENV INITSYSTEM on
+
 RUN apk add --no-cache dbus
 
 WORKDIR /usr/src/app
