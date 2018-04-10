@@ -1,0 +1,8 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-alpine
+
+RUN apk add --no-cache dbus
+
+WORKDIR /usr/src/app
+COPY start.sh .
+
+CMD ["bash", "start.sh"]
